@@ -1,0 +1,408 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.panel_wrap {
+  position: relative;
+}
+
+.pnl_title {
+  font-weight: 400;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.pnl_prog {
+  margin-bottom: 20px;
+  border-radius: 0;
+  --bs-progress-height: 25px;
+}
+
+
+
+.panel_wrap button {
+  background: transparent;
+  border: 0;
+}
+
+.panel_wrap .form-select {
+  background-image: url('../images/caret-down-fill.svg');
+  background-size: 10px 10px;
+}
+
+.panel_wrap .form-select option {
+  text-align: center;
+}
+
+.pnl_pg {
+  margin-bottom: 20px;
+  border-radius: 0;
+}
+
+.pnl_head {
+  background: #dee7e9;
+  padding: 20px 20px;
+  margin-bottom: 20px;
+}
+
+.pnl_head label {
+  font-size: 12px;
+  font-style: italic;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.pnl_src .pnl_tx {
+  max-width: 300px;
+  display: inline-block;
+}
+
+.pnl_src .src_tex {
+  background: #fff;
+  border: 0;
+  font-size: 13px;
+  max-width: 300px;
+  min-width: 100%;
+  display: inline-block;
+  padding: 15px 15px;
+  box-shadow: 0 0 0 #fff;
+  outline: 0;
+}
+
+.pnl_src .src_btn {
+  background: #007bff;
+  color: #fff;
+  border: 0;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 13px 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.pnl_gp {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+}
+
+.pnl_gp .pnl_li {
+  width: 150px;
+  display: inline-block;
+}
+
+.pnl_gp .pnl_li1 {
+  width: 300px;
+}
+
+.pnl_li .pnl_sel {
+  border: 1px solid #ccc;
+  border-radius: 0;
+  font-size: 13px;
+  color: #777;
+  padding: 15px 15px;
+  box-shadow: 0 0 0 #fff;
+  outline: 0;
+  text-align: center;
+}
+
+.pnl_li .pnl_num {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ccc;
+  color: #666;
+  font-size: 13px;
+  display: inline-block;
+  padding: 15px 15px;
+  text-align: center;
+  box-shadow: 0 0 0 #fff;
+  outline: 0;
+}
+
+.panel_bx {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: #fff;
+  color: #666;
+  border: 1px solid #c3c3c3;
+  padding: 18px 5px;
+  text-align: center;
+  display: block;
+}
+
+.panel_bx.active {
+  border: 1px solid #00a2e8;
+}
+
+.panel_bx.active h2 {
+  color: #00a2e8;
+}
+
+.panel_bx.active .form-check-input[type="checkbox"] {
+  background: #c3c3c3;
+}
+
+.panel_bx .pnl1 {
+  margin-bottom: 16px;
+  min-height: 26px;
+  position: relative;
+}
+
+.pnl1 .form-check {
+  position: absolute;
+  top: 0;
+  right: 5px;
+}
+
+.pnl1 .form-check-input[type="checkbox"] {
+  border-radius: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #666;
+  box-shadow: 0 0 0 #fff;
+}
+
+.pnl1 .form-check-input:checked {
+  background: transparent;
+}
+
+.panel_bx .pnl2 {
+  border-top: 1px solid #c3c3c3;
+  border-bottom: 1px solid #c3c3c3;
+  padding: 6px 0;
+}
+
+.panel_bx .pnl3 {
+  margin-top: 18px;
+}
+
+.panel_bx h2 {
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.panel_bx p {
+  margin: 0;
+  font-size: 13px;
+}
+
+.panel_bx .pnl_sc2,
+.panel_bx .pnl_sc1 {
+  border: 0;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #666;
+  text-align: center;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: 0 0 0 #fff;
+  outline: 0;
+}
+
+.panel_bx .pnl_sc2 {
+  font-size: 13px;
+}
+
+.pnl_sec1 {
+  margin-bottom: 50px;
+}
+
+.owl-carousel .owl-stage-outer {
+  margin-right: -2px;
+}
+
+.pnl_sec0.owl-carousel {
+  border-right: 0;
+}
+
+.pnl_sec1 .owl-nav button {
+  position: absolute;
+  top: 40%;
+  font-size: 22px !important;
+  color: #666 !important;
+}
+
+.pnl_sec1 .owl-nav .owl-prev {
+  left: -15px;
+}
+
+.pnl_sec1 .owl-nav .owl-next {
+  right: -15px;
+}
+
+.pnl_sec2 {
+  margin-bottom: 5px;
+}
+
+.pnl_sec2 h2 {
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #00a2e8;
+  margin: 0;
+}
+
+.pnl_sec2 h3 {
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #666;
+  margin: 0;
+}
+
+.pnl_sec2 .pnl_tt {
+  text-transform: none;
+  font-size: 14px;
+  display: inline-block;
+  padding: 8px 30px;
+  border: 1px solid #333;
+}
+
+.pnl_sec2 h2 span,
+.pnl_sec2 h3 span {
+  font-size: 14px;
+  text-transform: none;
+  padding-left: 8px;
+}
+
+.pnl_sec2 p {
+  margin: 0;
+  color: #666;
+}
+
+.btn_sec {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: right;
+}
+
+.btn_sec li {
+  display: inline-block;
+}
+
+.btn_sec button {
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 5px;
+}
+
+.btn_sec .btn_pnl {
+  background: #007bff;
+  color: #fff;
+}
+
+.btn_sec .btn_sc {
+  background: #28a745;
+}
+
+.pnl_sec3 {
+  border: 1px solid #c3c3c3;
+  padding: 15px 15px;
+  height: 300px;
+  overflow: scroll;
+}
+
+.panel_wrap fieldset:not(:first-of-type) {
+  display: none;
+}
+
+.panel_wrap .previous-step,
+.next-step {
+  float: right;
+}
+
+.panel_wrap .next-step,
+.panel_wrap .previous-step {
+  position: absolute;
+  top: -11px;
+  font-size: 45px;
+  line-height: 1.0;
+  color: #00a2e8;
+}
+
+.panel_wrap .next-step {
+  right: -25px;
+}
+
+.panel_wrap .previous-step {
+  left: -25px;
+}
+
+.panel_wrap fieldset {
+  position: unset !important;
+}
+
+/* Normal tablet layout */
+@media only screen and (min-width:769px) and (max-width:992px) {
+
+  .pnl_src .pnl_gp,
+  .pnl_src .pnl_tx {
+    margin-bottom: 5px;
+  }
+
+  .btn_sec button {
+    padding: 8px 15px;
+  }
+
+  .pnl_sec0.owl-carousel {
+    border-right: 1px solid #c3c3c3;
+  }
+}
+
+/* Normal mobile layout */
+@media only screen and (max-width:768px) {
+  .panel_wrap {
+    margin: 0 15px;
+  }
+
+  .pnl_title {
+    font-size: 24px;
+    margin: 0 15px;
+    margin-bottom: 15px;
+  }
+
+  .pnl_src .pnl_tx {
+    margin-bottom: 5px;
+  }
+
+  .btn_sec button {
+    padding: 8px 15px;
+  }
+
+  .pnl_gp .pnl_li {
+    float: left;
+    width: 48%;
+    margin-right: 2%;
+  }
+
+  .pnl_sec1 {
+    margin-bottom: 30px;
+  }
+
+  .pnl_sec2 h2,
+  .pnl_sec2 h3,
+  .pnl_src .src_btn {
+    margin-bottom: 10px;
+  }
+
+  .btn_sec {
+    text-align: left;
+  }
+
+  .pnl_gp .pnl_li1,
+  .pnl_src .pnl_gp {
+    width: 100%;
+  }
+
+  .pnl_sec0.owl-carousel {
+    border-right: 1px solid #c3c3c3;
+  }
+}

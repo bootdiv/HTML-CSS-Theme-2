@@ -1,0 +1,900 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+
+    <div class="container">
+        <div class="row mt-5 mb-5">
+            <div class="col-sm-12">
+                <h2 class="pnl_title">Create content sets with AI</h2>
+                <div class="panel_wrap">
+                    <div class="pnl_prog progress" role="progressbar" aria-valuenow="25" aria-valuemin="0"
+                        aria-valuemax="100">
+                        <div class="progress-bar progress-bar-striped bg-primary progress-bar-animated"
+                            style="width: 25%">Get Row Material</div>
+                    </div>
+
+                    <fieldset>
+                        <div class="pnl_head">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <form action="" method="get" class="pnl_src">
+                                        <div class="pnl_tx">
+                                            <label for="">Type a prompt below <img src="images/info.svg" alt=""></label>
+                                            <input class="src_tex" type="text"
+                                                placeholder="give an article about quantum computers">
+                                        </div>
+                                        <button class="src_btn" type="submit">Get Context</button>
+                                    </form>
+                                </div>
+                                <div class="col-sm-6 text-end">
+                                    <ul class="pnl_gp">
+                                        <li class="pnl_li">
+                                            <label for="">Creativity Level <img src="images/info.svg" alt=""></label>
+                                            <select class="form-select pnl_sel">
+                                                <option selected>Medium</option>
+                                                <option value="1">Medium 1</option>
+                                                <option value="2">Medium 2</option>
+                                                <option value="3">Medium 3</option>
+                                            </select>
+                                        </li>
+                                        <li class="pnl_li">
+                                            <label for="">Max Tokens <img src="images/info.svg" alt=""></label>
+                                            <input class="pnl_num" type="text" value="300">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pnl_sec1 pnl_sec0 owl-carousel" role="tablist">
+                            <div class="panel_bx active" data-bs-toggle="tab" data-bs-target="#panel1">
+                                <div class="pnl1">
+                                    <h2>Own Corpus</h2>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="check1">
+                                    </div>
+                                </div>
+                                <div class="pnl2">
+                                    <p>Not Available</p>
+                                </div>
+                                <div class="pnl3">
+                                    <button><img src="images/exclamation-triangle-fill.svg" alt=""></button>
+                                </div>
+                            </div>
+                            <div class="panel_bx" data-bs-toggle="tab" data-bs-target="#panel2">
+                                <div class="pnl1">
+                                    <h2>All Content</h2>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="check2">
+                                    </div>
+                                </div>
+                                <div class="pnl2">
+                                    <p>Increage Iron-rich Foods</p>
+                                </div>
+                                <div class="pnl3">
+                                    <button><i class="fa fa-solid fa-check"></i></button>
+                                    <button><i class="fa fa-solid fa-rotate-right"></i></button>
+                                </div>
+                            </div>
+                            <div class="panel_bx" data-bs-toggle="tab" data-bs-target="#panel3">
+                                <div class="pnl1">
+                                    <select ng-model="select1" class="form-select pnl_sc1">
+                                        <option ng-repeat="x in option1" value="{{x.model}}">{{x.model}}</option>
+                                    </select>
+                                </div>
+                                <div class="pnl2">
+                                    <select ng-model="select01" class="form-select pnl_sc2">
+                                        <option ng-repeat="x in options01" value="{{x.model}}">{{x.model}}</option>
+                                    </select>
+                                </div>
+                                <div class="pnl3">
+                                    <button><i class="fa fa-solid fa-check"></i></button>
+                                    <button><i class="fa fa-solid fa-rotate-right"></i></button>
+                                </div>
+                            </div>
+                            <div class="panel_bx" data-bs-toggle="tab" data-bs-target="#panel4">
+                                <div class="pnl1">
+                                    <select ng-model="select2" class="form-select pnl_sc1">
+                                        <option ng-repeat="x in option2" value="{{x.model}}">{{x.model}}</option>
+                                    </select>
+                                </div>
+                                <div class="pnl2">
+                                    <select ng-model="select02" class="form-select pnl_sc2">
+                                        <option ng-repeat="x in option02" value="{{x.model}}">{{x.model}}</option>
+                                    </select>
+                                </div>
+                                <div class="pnl3">
+                                    <button><i class="fa fa-solid fa-check"></i></button>
+                                    <button><i class="fa fa-solid fa-rotate-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="panel1">
+                                <div class="row align-items-center pnl_sec2">
+                                    <div class="col-sm-4 col-xl-6">
+                                        <h2>Own Corpus <span>Not Available</span></h2>
+                                    </div>
+                                    <div class="col-sm-3 col-xl-2">
+                                        <p>Word count: 0</p>
+                                    </div>
+                                    <div class="col-sm-5 col-xl-4">
+                                        <ul class="btn_sec">
+                                            <li><button type="submit" class="btn_re"><i
+                                                        class="fa fa-solid fa-rotate-right"></i></button></li>
+                                            <li><button type="submit" class="btn_pnl">Save</button></li>
+                                            <li><button type="submit" class="btn_pnl btn_sc">Split in
+                                                    sub-topics</button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="pnl_sec3">
+
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="panel2">
+                                <div class="row align-items-center pnl_sec2">
+                                    <div class="col-sm-4 col-xl-6">
+                                        <h2>All Content <span>Increage Iron-rich Foods</span></h2>
+                                    </div>
+                                    <div class="col-sm-3 col-xl-2">
+                                        <p>Word count: 344</p>
+                                    </div>
+                                    <div class="col-sm-5 col-xl-4">
+                                        <ul class="btn_sec">
+                                            <li><button type="submit" class="btn_re"><i
+                                                        class="fa fa-solid fa-rotate-right"></i></button></li>
+                                            <li><button type="submit" class="btn_pnl">Save</button></li>
+                                            <li><button type="submit" class="btn_pnl btn_sc">Split in
+                                                    sub-topics</button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="pnl_sec3">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="panel3">
+                                <div class="row align-items-center pnl_sec2">
+                                    <div class="col-sm-4 col-xl-6">
+                                        <h2>{{select1}} <span>{{select01}}</span></h2>
+                                    </div>
+                                    <div class="col-sm-3 col-xl-2">
+                                        <p>Word count: 344</p>
+                                    </div>
+                                    <div class="col-sm-5 col-xl-4">
+                                        <ul class="btn_sec">
+                                            <li><button type="submit" class="btn_re"><i
+                                                        class="fa fa-solid fa-rotate-right"></i></button></li>
+                                            <li><button type="submit" class="btn_pnl">Save</button></li>
+                                            <li><button type="submit" class="btn_pnl btn_sc">Split in
+                                                    sub-topics</button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="pnl_sec3">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="panel4">
+                                <div class="row align-items-center pnl_sec2">
+                                    <div class="col-sm-4 col-xl-6">
+                                        <h2>{{select2}} <span>{{select02}}</span></h2>
+                                    </div>
+                                    <div class="col-sm-3 col-xl-2">
+                                        <p>Word count: 344</p>
+                                    </div>
+                                    <div class="col-sm-5 col-xl-4">
+                                        <ul class="btn_sec">
+                                            <li><button type="submit" class="btn_re"><i
+                                                        class="fa fa-solid fa-rotate-right"></i></button></li>
+                                            <li><button type="submit" class="btn_pnl">Save</button></li>
+                                            <li><button type="submit" class="btn_pnl btn_sc">Split in
+                                                    sub-topics</button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="pnl_sec3">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" name="next-step" class="next-step"><i
+                                class="fa fa-solid fa-caret-right"></i></button>
+                    </fieldset>
+                    <fieldset>
+                        <div class="pnl_head">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <form action="" method="get" class="pnl_src">
+                                        <ul class="pnl_gp">
+                                            <li class="pnl_li">
+                                                <label for="">Select Template</label>
+                                                <select class="form-select pnl_sel">
+                                                    <option selected>Blog Snippets</option>
+                                                    <option value="1">Option 1</option>
+                                                    <option value="2">Option 2</option>
+                                                    <option value="3">Option 3</option>
+                                                </select>
+                                            </li>
+                                            <li class="pnl_li">
+                                                <label for="">Select Preset</label>
+                                                <select class="form-select pnl_sel">
+                                                    <option selected>My Recipe 1</option>
+                                                    <option value="1">Option 1</option>
+                                                    <option value="2">Option 2</option>
+                                                    <option value="3">Option 3</option>
+                                                </select>
+                                            </li>
+                                        </ul>
+                                        <button class="src_btn" type="submit">Run All Queries</button>
+                                    </form>
+                                </div>
+                                <div class="col-sm-6 text-end">
+                                    <ul class="pnl_gp">
+                                        <li class="pnl_li">
+                                            <label for="">Creativity Level <img src="images/info.svg" alt=""></label>
+                                            <select class="form-select pnl_sel">
+                                                <option selected>Medium</option>
+                                                <option value="1">Medium 1</option>
+                                                <option value="2">Medium 2</option>
+                                                <option value="3">Medium 3</option>
+                                            </select>
+                                        </li>
+                                        <li class="pnl_li">
+                                            <label for="">Max Tokens <img src="images/info.svg" alt=""></label>
+                                            <input class="pnl_num" type="text" value="300">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pnl_sec1 owl-carousel" role="tablist">
+                            <div class="panel_bx active" data-bs-toggle="tab" data-bs-target="#panel5">
+                                <div class="pnl1">
+                                    <select ng-model="select5" class="form-select pnl_sc1">
+                                        <option ng-repeat="x in option5" value="{{x.model}}">{{x.model}}</option>
+                                    </select>
+                                </div>
+                                <div class="pnl2">
+                                    <select ng-model="select05" class="form-select pnl_sc2">
+                                        <option ng-repeat="x in option05" value="{{x.model}}">{{x.model}}</option>
+                                    </select>
+                                </div>
+                                <div class="pnl3">
+                                    <button><i class="fa fa-solid fa-check"></i></button>
+                                    <button><i class="fa fa-solid fa-rotate-right"></i></button>
+                                </div>
+                            </div>
+                            <div class="panel_bx" data-bs-toggle="tab" data-bs-target="#panel6">
+                                <div class="pnl1">
+                                    <select ng-model="select6" class="form-select pnl_sc1">
+                                        <option ng-repeat="x in option6" value="{{x.model}}">{{x.model}}</option>
+                                    </select>
+                                </div>
+                                <div class="pnl2">
+                                    <select ng-model="select06" class="form-select pnl_sc2">
+                                        <option ng-repeat="x in option06" value="{{x.model}}">{{x.model}}</option>
+                                    </select>
+                                </div>
+                                <div class="pnl3">
+                                    <button><i class="fa fa-solid fa-check"></i></button>
+                                    <button><i class="fa fa-solid fa-rotate-right"></i></button>
+                                </div>
+                            </div>
+                            <div class="panel_bx" data-bs-toggle="tab" data-bs-target="#panel7">
+                                <div class="pnl1">
+                                    <select ng-model="select7" class="form-select pnl_sc1">
+                                        <option ng-repeat="x in option7" value="{{x.model}}">{{x.model}}</option>
+                                    </select>
+                                </div>
+                                <div class="pnl2">
+                                    <select ng-model="select07" class="form-select pnl_sc2">
+                                        <option ng-repeat="x in option07" value="{{x.model}}">{{x.model}}</option>
+                                    </select>
+                                </div>
+                                <div class="pnl3">
+                                    <button><i class="fa fa-solid fa-check"></i></button>
+                                    <button><i class="fa fa-solid fa-rotate-right"></i></button>
+                                </div>
+                            </div>
+                            <div class="panel_bx" data-bs-toggle="tab" data-bs-target="#panel8">
+                                <div class="pnl1">
+                                    <select ng-model="select8" class="form-select pnl_sc1">
+                                        <option ng-repeat="x in option8" value="{{x.model}}">{{x.model}}</option>
+                                    </select>
+                                </div>
+                                <div class="pnl2">
+                                    <select ng-model="select08" class="form-select pnl_sc2">
+                                        <option ng-repeat="x in option08" value="{{x.model}}">{{x.model}}</option>
+                                    </select>
+                                </div>
+                                <div class="pnl3">
+                                    <button><i class="fa fa-solid fa-check"></i></button>
+                                    <button><i class="fa fa-solid fa-rotate-right"></i></button>
+                                </div>
+                            </div>
+                            <div class="panel_bx" data-bs-toggle="tab" data-bs-target="#panel9">
+                                <div class="pnl1">
+                                    <select ng-model="select9" class="form-select pnl_sc1">
+                                        <option ng-repeat="x in option9" value="{{x.model}}">{{x.model}}</option>
+                                    </select>
+                                </div>
+                                <div class="pnl2">
+                                    <select ng-model="select09" class="form-select pnl_sc2">
+                                        <option ng-repeat="x in option09" value="{{x.model}}">{{x.model}}</option>
+                                    </select>
+                                </div>
+                                <div class="pnl3">
+                                    <button><i class="fa fa-solid fa-check"></i></button>
+                                    <button><i class="fa fa-solid fa-rotate-right"></i></button>
+                                </div>
+                            </div>
+                            <div class="panel_bx" data-bs-toggle="tab" data-bs-target="#panel10">
+                                <div class="pnl1">
+                                    <select ng-model="select10" class="form-select pnl_sc1">
+                                        <option ng-repeat="x in option10" value="{{x.model}}">{{x.model}}</option>
+                                    </select>
+                                </div>
+                                <div class="pnl2">
+                                    <select ng-model="select010" class="form-select pnl_sc2">
+                                        <option ng-repeat="x in option010" value="{{x.model}}">{{x.model}}</option>
+                                    </select>
+                                </div>
+                                <div class="pnl3">
+                                    <button><i class="fa fa-solid fa-check"></i></button>
+                                    <button><i class="fa fa-solid fa-rotate-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="panel5">
+                                <div class="row align-items-center pnl_sec2">
+                                    <div class="col-sm-8">
+                                        <h3>{{select5}} <span>{{select05}}</span></h3>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <p>Word count: 344</p>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <ul class="btn_sec">
+                                            <li><button type="submit" class="btn_re"><i
+                                                        class="fa fa-solid fa-rotate-right"></i></button></li>
+                                            <li><button type="submit" class="btn_pnl">Save</button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="pnl_sec3">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <p>Sed dignissim metus elit, id lobortis nunc consectetur vitae.</p>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="panel6">
+                                <div class="row align-items-center pnl_sec2">
+                                    <div class="col-sm-8">
+                                        <h3>{{select6}} <span>{{select06}}</span></h3>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <p>Word count: 344</p>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <ul class="btn_sec">
+                                            <li><button type="submit" class="btn_re"><i
+                                                        class="fa fa-solid fa-rotate-right"></i></button></li>
+                                            <li><button type="submit" class="btn_pnl">Save</button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="pnl_sec3">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <p>Sed dignissim metus elit, id lobortis nunc consectetur vitae.</p>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="panel7">
+                                <div class="row align-items-center pnl_sec2">
+                                    <div class="col-sm-8">
+                                        <h3>{{select7}} <span>{{select07}}</span></h3>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <p>Word count: 344</p>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <ul class="btn_sec">
+                                            <li><button type="submit" class="btn_re"><i
+                                                        class="fa fa-solid fa-rotate-right"></i></button></li>
+                                            <li><button type="submit" class="btn_pnl">Save</button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="pnl_sec3">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <p>Sed dignissim metus elit, id lobortis nunc consectetur vitae.</p>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="panel8">
+                                <div class="row align-items-center pnl_sec2">
+                                    <div class="col-sm-8">
+                                        <h3>{{select8}} <span>{{select08}}</span></h3>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <p>Word count: 344</p>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <ul class="btn_sec">
+                                            <li><button type="submit" class="btn_re"><i
+                                                        class="fa fa-solid fa-rotate-right"></i></button></li>
+                                            <li><button type="submit" class="btn_pnl">Save</button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="pnl_sec3">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <p>Sed dignissim metus elit, id lobortis nunc consectetur vitae.</p>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="panel9">
+                                <div class="row align-items-center pnl_sec2">
+                                    <div class="col-sm-8">
+                                        <h3>{{select9}} <span>{{select09}}</span></h3>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <p>Word count: 344</p>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <ul class="btn_sec">
+                                            <li><button type="submit" class="btn_re"><i
+                                                        class="fa fa-solid fa-rotate-right"></i></button></li>
+                                            <li><button type="submit" class="btn_pnl">Save</button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="pnl_sec3">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <p>Sed dignissim metus elit, id lobortis nunc consectetur vitae.</p>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="panel10">
+                                <div class="row align-items-center pnl_sec2">
+                                    <div class="col-sm-8">
+                                        <h3>{{select10}} <span>{{select010}}</span></h3>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <p>Word count: 344</p>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <ul class="btn_sec">
+                                            <li><button type="submit" class="btn_re"><i
+                                                        class="fa fa-solid fa-rotate-right"></i></button></li>
+                                            <li><button type="submit" class="btn_pnl">Save</button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="pnl_sec3">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <p>Sed dignissim metus elit, id lobortis nunc consectetur vitae.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="button" name="next-step" class="next-step"><i
+                                class="fa fa-solid fa-caret-right"></i></button>
+                        <button type="button" name="previous-step" class="previous-step"><i
+                                class="fa fa-solid fa-caret-left"></i></button>
+
+                    </fieldset>
+                    <fieldset>
+                        <div class="pnl_head">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <form action="" method="get" class="pnl_src">
+                                        <ul class="pnl_gp">
+                                            <li class="pnl_li pnl_li1">
+                                                <label for=""></label>
+                                                <select class="form-select pnl_sel">
+                                                    <option selected>Load Previously Save Content Set</option>
+                                                    <option value="1">Option 1</option>
+                                                    <option value="2">Option 2</option>
+                                                    <option value="3">Option 3</option>
+                                                </select>
+                                            </li>
+                                        </ul>
+                                        <button class="src_btn" type="submit">Retrieve</button>
+                                    </form>
+                                </div>
+                                <div class="col-sm-6 text-end">
+                                    <ul class="pnl_gp">
+                                        <li class="pnl_li">
+                                            <label for="">Creativity Level <img src="images/info.svg" alt=""></label>
+                                            <select class="form-select pnl_sel">
+                                                <option selected>Medium</option>
+                                                <option value="1">Medium 1</option>
+                                                <option value="2">Medium 2</option>
+                                                <option value="3">Medium 3</option>
+                                            </select>
+                                        </li>
+                                        <li class="pnl_li">
+                                            <label for="">Max Tokens <img src="images/info.svg" alt=""></label>
+                                            <input class="pnl_num" type="text" value="300">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center pnl_sec2">
+                            <div class="col-sm-5">
+                                <h3 class="pnl_tt">Give this content set a name</h3>
+                            </div>
+                            <div class="col-sm-2">
+                                <p>Word count: 344</p>
+                            </div>
+                            <div class="col-sm-3">
+                                <p>Tokens used: 580($0.015)</p>
+                            </div>
+                            <div class="col-sm-2">
+                                <ul class="btn_sec">
+                                    <li><button type="submit" class="btn_re"><i
+                                                class="fa fa-solid fa-rotate-right"></i></button></li>
+                                    <li><button type="submit" class="btn_pnl">Save</button></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="pnl_sec3">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p>Sed dignissim metus elit, id lobortis nunc consectetur vitae. Suspendisse pulvinar nisi
+                                eget nulla efficitur, quis mattis risus pharetra. Etiam malesuada ante ut leo venenatis
+                                suscipit.</p>
+                            <p>Proin vel libero cursus, pretium odio in, feugiat risus. Nulla tristique, leo lacinia
+                                cursus cursus, lectus lectus tempus est, ut tincidunt lacus elit in nibh. Quisque ut
+                                volutpat sem. Vestibulum tempor elementum faucibus. Sed sed pellentesque turpis. </p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p>Sed dignissim metus elit, id lobortis nunc consectetur vitae. Suspendisse pulvinar nisi
+                                eget nulla efficitur, quis mattis risus pharetra. Etiam malesuada ante ut leo venenatis
+                                suscipit.</p>
+                            <p>Proin vel libero cursus, pretium odio in, feugiat risus. Nulla tristique, leo lacinia
+                                cursus cursus, lectus lectus tempus est, ut tincidunt lacus elit in nibh. Quisque ut
+                                volutpat sem. Vestibulum tempor elementum faucibus. Sed sed pellentesque turpis. </p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p>Sed dignissim metus elit, id lobortis nunc consectetur vitae. Suspendisse pulvinar nisi
+                                eget nulla efficitur, quis mattis risus pharetra. Etiam malesuada ante ut leo venenatis
+                                suscipit.</p>
+                            <p>Proin vel libero cursus, pretium odio in, feugiat risus. Nulla tristique, leo lacinia
+                                cursus cursus, lectus lectus tempus est, ut tincidunt lacus elit in nibh. Quisque ut
+                                volutpat sem. Vestibulum tempor elementum faucibus. Sed sed pellentesque turpis. </p>
+                        </div>
+
+                        <button type="button" name="next-step" class="next-step"><i
+                                class="fa fa-solid fa-caret-right"></i></button>
+                        <button type="button" name="previous-step" class="previous-step"><i
+                                class="fa fa-solid fa-caret-left"></i></button>
+
+                    </fieldset>
+                    <fieldset>
+                        <div class="pnl_head">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <form action="" method="get" class="pnl_src">
+                                        <ul class="pnl_gp">
+                                            <li class="pnl_li">
+                                                <label for="">Select Template</label>
+                                                <select class="form-select pnl_sel">
+                                                    <option selected>SEO assets</option>
+                                                    <option value="1">Option 1</option>
+                                                    <option value="2">Option 2</option>
+                                                    <option value="3">Option 3</option>
+                                                </select>
+                                            </li>
+                                            <li class="pnl_li">
+                                                <label for="">Select Preset</label>
+                                                <select class="form-select pnl_sel">
+                                                    <option selected>My SEO recipe 1</option>
+                                                    <option value="1">Option 1</option>
+                                                    <option value="2">Option 2</option>
+                                                    <option value="3">Option 3</option>
+                                                </select>
+                                            </li>
+                                        </ul>
+                                        <button class="src_btn" type="submit">Run All Queries</button>
+                                    </form>
+                                </div>
+                                <div class="col-sm-6 text-end">
+                                    <ul class="pnl_gp">
+                                        <li class="pnl_li">
+                                            <label for="">Creativity Level <img src="images/info.svg" alt=""></label>
+                                            <select class="form-select pnl_sel">
+                                                <option selected>Medium</option>
+                                                <option value="1">Medium 1</option>
+                                                <option value="2">Medium 2</option>
+                                                <option value="3">Medium 3</option>
+                                            </select>
+                                        </li>
+                                        <li class="pnl_li">
+                                            <label for="">Max Tokens <img src="images/info.svg" alt=""></label>
+                                            <input class="pnl_num" type="text" value="300">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pnl_sec1 owl-carousel" role="tablist">
+                            <div class="panel_bx active" data-bs-toggle="tab" data-bs-target="#panel15">
+                                <div class="pnl1">
+                                    <select ng-model="select15" class="form-select pnl_sc1">
+                                        <option ng-repeat="x in option15" value="{{x.model}}">{{x.model}}</option>
+                                    </select>
+                                </div>
+                                <div class="pnl2">
+                                    <select ng-model="select015" class="form-select pnl_sc2">
+                                        <option ng-repeat="x in option015" value="{{x.model}}">{{x.model}}</option>
+                                    </select>
+                                </div>
+                                <div class="pnl3">
+                                    <button><i class="fa fa-solid fa-check"></i></button>
+                                    <button><i class="fa fa-solid fa-rotate-right"></i></button>
+                                </div>
+                            </div>
+                            <div class="panel_bx" data-bs-toggle="tab" data-bs-target="#panel16">
+                                <div class="pnl1">
+                                    <select ng-model="select16" class="form-select pnl_sc1">
+                                        <option ng-repeat="x in option16" value="{{x.model}}">{{x.model}}</option>
+                                    </select>
+                                </div>
+                                <div class="pnl2">
+                                    <select ng-model="select016" class="form-select pnl_sc2">
+                                        <option ng-repeat="x in option016" value="{{x.model}}">{{x.model}}</option>
+                                    </select>
+                                </div>
+                                <div class="pnl3">
+                                    <button><i class="fa fa-solid fa-check"></i></button>
+                                    <button><i class="fa fa-solid fa-rotate-right"></i></button>
+                                </div>
+                            </div>
+                            <div class="panel_bx" data-bs-toggle="tab" data-bs-target="#panel17">
+                                <div class="pnl1">
+                                    <select ng-model="select17" class="form-select pnl_sc1">
+                                        <option ng-repeat="x in option17" value="{{x.model}}">{{x.model}}</option>
+                                    </select>
+                                </div>
+                                <div class="pnl2">
+                                    <select ng-model="select017" class="form-select pnl_sc2">
+                                        <option ng-repeat="x in option017" value="{{x.model}}">{{x.model}}</option>
+                                    </select>
+                                </div>
+                                <div class="pnl3">
+                                    <button><i class="fa fa-solid fa-check"></i></button>
+                                    <button><i class="fa fa-solid fa-rotate-right"></i></button>
+                                </div>
+                            </div>
+                            <div class="panel_bx" data-bs-toggle="tab" data-bs-target="#panel18">
+                                <div class="pnl1">
+                                    <select ng-model="select18" class="form-select pnl_sc1">
+                                        <option ng-repeat="x in option18" value="{{x.model}}">{{x.model}}</option>
+                                    </select>
+                                </div>
+                                <div class="pnl2">
+                                    <select ng-model="select018" class="form-select pnl_sc2">
+                                        <option ng-repeat="x in option018" value="{{x.model}}">{{x.model}}</option>
+                                    </select>
+                                </div>
+                                <div class="pnl3">
+                                    <button><i class="fa fa-solid fa-check"></i></button>
+                                    <button><i class="fa fa-solid fa-rotate-right"></i></button>
+                                </div>
+                            </div>
+                            <div class="panel_bx" data-bs-toggle="tab" data-bs-target="#panel19">
+                                <div class="pnl1">
+                                    <select ng-model="select19" class="form-select pnl_sc1">
+                                        <option ng-repeat="x in option19" value="{{x.model}}">{{x.model}}</option>
+                                    </select>
+                                </div>
+                                <div class="pnl2">
+                                    <select ng-model="select019" class="form-select pnl_sc2">
+                                        <option ng-repeat="x in option019" value="{{x.model}}">{{x.model}}</option>
+                                    </select>
+                                </div>
+                                <div class="pnl3">
+                                    <button><i class="fa fa-solid fa-check"></i></button>
+                                    <button><i class="fa fa-solid fa-rotate-right"></i></button>
+                                </div>
+                            </div>
+                            <div class="panel_bx" data-bs-toggle="tab" data-bs-target="#panel20">
+                                <div class="pnl1">
+                                    <select ng-model="select20" class="form-select pnl_sc1">
+                                        <option ng-repeat="x in option20" value="{{x.model}}">{{x.model}}</option>
+                                    </select>
+                                </div>
+                                <div class="pnl2">
+                                    <select ng-model="select020" class="form-select pnl_sc2">
+                                        <option ng-repeat="x in option020" value="{{x.model}}">{{x.model}}</option>
+                                    </select>
+                                </div>
+                                <div class="pnl3">
+                                    <button><i class="fa fa-solid fa-check"></i></button>
+                                    <button><i class="fa fa-solid fa-rotate-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="panel15">
+                                <div class="row align-items-center pnl_sec2">
+                                    <div class="col-sm-8">
+                                        <h3>{{select15}} <span>{{select015}}</span></h3>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <p>Word count: 344</p>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <ul class="btn_sec">
+                                            <li><button type="submit" class="btn_re"><i
+                                                        class="fa fa-solid fa-rotate-right"></i></button></li>
+                                            <li><button type="submit" class="btn_pnl">Save</button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="pnl_sec3">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <p>Sed dignissim metus elit, id lobortis nunc consectetur vitae.</p>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="panel16">
+                                <div class="row align-items-center pnl_sec2">
+                                    <div class="col-sm-8">
+                                        <h3>{{select16}} <span>{{select016}}</span></h3>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <p>Word count: 344</p>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <ul class="btn_sec">
+                                            <li><button type="submit" class="btn_re"><i
+                                                        class="fa fa-solid fa-rotate-right"></i></button></li>
+                                            <li><button type="submit" class="btn_pnl">Save</button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="pnl_sec3">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <p>Sed dignissim metus elit, id lobortis nunc consectetur vitae.</p>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="panel17">
+                                <div class="row align-items-center pnl_sec2">
+                                    <div class="col-sm-8">
+                                        <h3>{{select17}} <span>{{select017}}</span></h3>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <p>Word count: 344</p>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <ul class="btn_sec">
+                                            <li><button type="submit" class="btn_re"><i
+                                                        class="fa fa-solid fa-rotate-right"></i></button></li>
+                                            <li><button type="submit" class="btn_pnl">Save</button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="pnl_sec3">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <p>Sed dignissim metus elit, id lobortis nunc consectetur vitae.</p>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="panel18">
+                                <div class="row align-items-center pnl_sec2">
+                                    <div class="col-sm-8">
+                                        <h3>{{select18}} <span>{{select018}}</span></h3>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <p>Word count: 344</p>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <ul class="btn_sec">
+                                            <li><button type="submit" class="btn_re"><i
+                                                        class="fa fa-solid fa-rotate-right"></i></button></li>
+                                            <li><button type="submit" class="btn_pnl">Save</button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="pnl_sec3">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <p>Sed dignissim metus elit, id lobortis nunc consectetur vitae.</p>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="panel19">
+                                <div class="row align-items-center pnl_sec2">
+                                    <div class="col-sm-8">
+                                        <h3>{{select19}} <span>{{select019}}</span></h3>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <p>Word count: 344</p>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <ul class="btn_sec">
+                                            <li><button type="submit" class="btn_re"><i
+                                                        class="fa fa-solid fa-rotate-right"></i></button></li>
+                                            <li><button type="submit" class="btn_pnl">Save</button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="pnl_sec3">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <p>Sed dignissim metus elit, id lobortis nunc consectetur vitae.</p>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="panel20">
+                                <div class="row align-items-center pnl_sec2">
+                                    <div class="col-sm-8">
+                                        <h3>{{select20}} <span>{{select020}}</span></h3>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <p>Word count: 344</p>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <ul class="btn_sec">
+                                            <li><button type="submit" class="btn_re"><i
+                                                        class="fa fa-solid fa-rotate-right"></i></button></li>
+                                            <li><button type="submit" class="btn_pnl">Save</button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="pnl_sec3">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <p>Sed dignissim metus elit, id lobortis nunc consectetur vitae.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="button" name="previous-step" class="previous-step"><i
+                                class="fa fa-solid fa-caret-left"></i></button>
+
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
